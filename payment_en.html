@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"
+        integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.6.0/qs.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: 'Lato';
+            background-color: #eae8f7
+        }
+
+        h5 {
+            margin: 20px 0px 20px 0px;
+            font-family: 'Lato';
+            font-weight: bold;
+
+        }
+
+        img {
+            vertical-align: middle;
+            max-width: 30px;
+            width: 20px;
+            max-height: 100%;
+            margin: 0%;
+            padding-right: 2px;
+        }
+
+
+
+        .image:hover {
+
+            box-shadow: 50px blue;
+            transform: translateY(4px);
+
+        }
+
+        button {
+            padding: 2px;
+            margin: 0.5% 1% 0% 1%;
+            width: 48%;
+            max-width: 48%;
+            height: 50px;
+            font-size: 11px;
+            font-weight: bold;
+            border-radius: 10px;
+            border: 2px solid #6242FC;
+            -webkit-border-radius: 10px;
+            background-color: white;
+            font-family: 'Lato';
+        }
+
+        button:hover {
+            -webkit-box-shadow: 100px 600px 500px #ccc;
+            box-shadow: 2px 6px 5px #ccc;
+            -moz-box-shadow: 100px 600px 100px #ccc;
+            border: 5px solid #6242FC;
+            color: #6242FC;
+            border-radius: 10px;
+            -moz-border-radius: 10px;
+        }
+
+        .left {
+            float: left;
+        }
+
+        .right {
+            float: right;
+        }
+
+        button {
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <script type="text/javascript">
+
+        window.addEventListener('load', (event) => {
+
+            const { title } = Qs.parse(location.search, { ignoreQueryPrefix: true })
+        document.getElementById("heading").innerHTML = "Please choose the payment tutorial below:" 
+    })
+        function back() {
+            window.parent.postMessage(
+                JSON.stringify({
+                    event_code: "ym-client-event",
+                    data: "@go-back"
+                }),
+                "*"
+            );
+        }
+
+        function credit() {
+            window.parent.postMessage(
+                JSON.stringify({
+                    event_code: "ym-client-event",
+                    data: "How to Purchase Using Credit or Debit Card"
+                }),
+                "*"
+            );
+
+        }
+
+
+
+        function vodafone() {
+            window.parent.postMessage(
+                JSON.stringify({
+                    event_code: "ym-client-event",
+                    data: "How to Purchase Using Vodafone Cash"
+                }),
+                "*"
+            );
+
+        }
+
+         function masary() {
+            console.log("how to redeem minecraft voucher ")
+            window.parent.postMessage(
+                JSON.stringify({
+                    event_code: "ym-client-event",
+                    data: "How to Purchase Using Masary, Aman, Momken"
+                }),
+                "*"
+            );
+        }
+        function Fawry() {
+            console.log("how to redeem minecraft voucher ")
+            window.parent.postMessage(
+                JSON.stringify({
+                    event_code: "ym-client-event",
+                    data: "How to Purchase Using Fawry"
+                }),
+                "*"
+            );
+        }
+        function orange() {
+            console.log("how to redeem minecraft voucher ")
+            window.parent.postMessage(
+                JSON.stringify({
+                    event_code: "ym-client-event",
+                    data: "How to Purchase Using Orange Money"
+                }),
+                "*"
+            );
+        }
+        
+    </script>
+        
+        </script>
+        <div class = "image">
+        <img src="https://cdn.yellowmessenger.com/KseiGAPc8y401621566579976.jpeg" alt="" style="float: right;width:25px;height:25px;max-width: 40px;max-height: 40px;margin-right: 4px;" onclick="back()">
+        </div>
+            </br>
+            
+          <h5 id = "heading" style ="font-weight:bold" > Please choose the payment tutorial below:</h5>
+    
+    
+    
+        <button type="button" onclick="credit()" class="right primary-btn col-xs-11 text-left">
+            <img src="https://theme.zdassets.com/theme_assets/10201709/aa41cded0c0b1e167fe301603a8276ec4e286ecb.jpg" alt="Place Holder" /><span> Credit or Debit Card</span>
+        </button>
+    
+        <button type="button" onclick="vodafone()" class="left primary-btn col-xs-11 text-left">
+            <img src="https://theme.zdassets.com/theme_assets/10201709/8cc70b2790dc3b76051283ab480d661e6ccba28c.jpg" alt="Place Holder" /><span>Vodafone Cash</span>
+        </button>
+    
+    
+    
+        <button type="button" onclick="masary()" class="left primary-btn col-xs-11 text-left">
+            <img src="https://theme.zdassets.com/theme_assets/10201709/d67c9564ebbf4f3076e1b96ad1fac17a8d997326.jpg" alt="Place Holder" /><span>Masary, Aman, Momken</span>
+            
+            
+        </button>
+        <button type="button" onclick="Fawry()" class="left primary-btn col-xs-11 text-left">
+            <img src="https://theme.zdassets.com/theme_assets/10201709/9c48e5a88d7de253601f4432608a431fbff9377f.jpg" alt="Place Holder" /><span>Fawry</span>
+            
+            
+        </button>
+    </button>
+    <button type="button" onclick="orange()" class="left primary-btn col-xs-11 text-left">
+        <img src="https://theme.zdassets.com/theme_assets/10201709/b91dc24eaf30eb0911890ace98f4decd4ae00e20.jpg" alt="Place Holder" /><span>Orange Money</span>
+        
+        
+    </button>
+</button>
+    
+    </body>
+    </html>
